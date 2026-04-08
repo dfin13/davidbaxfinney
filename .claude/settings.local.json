@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(ls tailwind.config*)",
+      "Bash(pkill -f \"next dev\")",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' http://localhost:3000__TRACKED_VAR__)",
+      "Bash(curl -s -o /dev/null -w \"/ → %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"/about → %{http_code}\\\\n\" http://localhost:3000/about)",
+      "Bash(curl -s -o /dev/null -w \"/resume → %{http_code}\\\\n\" http://localhost:3000/resume)",
+      "Bash(curl -s -o /dev/null -w \"/persona → %{http_code}\\\\n\" http://localhost:3000/persona)",
+      "Bash(curl -s -o /dev/null -w \"/portfolio → %{http_code}\\\\n\" http://localhost:3000/portfolio)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/persona)",
+      "Bash(curl -s http://localhost:3000/portfolio)",
+      "Bash(curl -s -o /dev/null -w \"/contact → %{http_code}\\\\n\" http://localhost:3000/contact)",
+      "Bash(curl -s http://localhost:3000__TRACKED_VAR__)",
+      "Bash(node -e \"require\\('framer-motion'\\)\")",
+      "Bash(node -e \"require\\('recharts'\\)\")",
+      "Bash(node -e \"require\\('lucide-react'\\)\")",
+      "Bash(pkill -f \"next build\")",
+      "Bash(npx tsc:*)",
+      "Bash(node:*)",
+      "Bash(grep:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
