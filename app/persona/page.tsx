@@ -388,11 +388,11 @@ export default function PersonaEvolution() {
               <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
                 <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">What the Asymmetry Means</p>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Warmth is the more dominant signal right now (+6.36 vs. +3.64 on confidence),
-                  which means I&apos;m perceived as highly trustworthy with a strong relational
-                  presence. The growth edge is strengthening how authority registers: executive
-                  presence cues like vocal precision, deliberate pacing, and composed stillness.
-                  Both are already positive. The opportunity is to close the gap between them.
+                  Warmth is the more dominant signal (+6.36 vs. +3.64 on confidence), reflecting
+                  a profile perceived as highly trustworthy with strong relational presence. Both
+                  dimensions are positive. The development priority is strengthening how authority
+                  registers alongside that relational foundation: vocal precision, deliberate pacing,
+                  and composed stillness are the specific, trainable levers.
                 </p>
               </div>
             </div>
@@ -428,7 +428,7 @@ export default function PersonaEvolution() {
                 implication:
                   "I enter collaborative settings with significant social authority. My energy sets a pace that others follow, which is an asset in fast-moving environments. The calibration point: in rooms with quieter or more deliberate communicators, holding space for full input before advancing a direction produces better outcomes.",
                 adjustment:
-                  "Build explicit pause points. Ask 'What am I missing?' before closing a discussion.",
+                  "Build structured input moments. Invite additional perspectives before closing a direction.",
               },
               {
                 context: "In Leadership",
@@ -452,7 +452,7 @@ export default function PersonaEvolution() {
                 <p className="text-sm text-slate-300 leading-relaxed mb-4">{item.implication}</p>
                 <div className="border-t border-white/8 pt-4">
                   <p className="text-xs text-gold-400 font-semibold uppercase tracking-wider mb-1">
-                    Adjustment
+                    Calibration
                   </p>
                   <p className="text-xs text-slate-300 italic leading-relaxed">{item.adjustment}</p>
                 </div>
@@ -499,16 +499,16 @@ export default function PersonaEvolution() {
                 title: "Create Space Before Deciding",
                 evidence: "SPI Driver profile · Team role: Pragmatist · Reactivity gap SPI −3 vs. PRS 1.4",
                 insight:
-                  "My natural pace is fast. In environments with a diverse mix of behavioral styles, that speed can read as dismissiveness, even when the intent is efficiency. The Driver&apos;s strength is execution. The risk is inadvertently closing conversations that others needed more time in.",
-                action: "In team settings: ask one more question before proposing a solution.",
+                  "Execution pace is a competitive strength. In environments with varied communication styles, maintaining forward momentum while ensuring full input is captured is a hallmark of effective leadership. The calibration is not about slowing down — it is about building deliberate input moments within existing momentum so that speed and inclusion operate together.",
+                action: "In collaborative settings: create structured space for input before advancing a direction.",
               },
               {
                 num: "04",
                 title: "Let Outcomes Build Credibility",
                 evidence: "Achievement motivator 80 · Competition motivator 80 · Stability motivator 35",
                 insight:
-                  "My motivator profile shows someone who is genuinely wired for achievement and competition, not stability or recognition. That energy, when channeled correctly, produces results that build trust over time. But ambition that isn&apos;t grounded in delivered outcomes can read as overconfidence. The counter is simple: keep executing.",
-                action: "Let New Wave, Riskr, and the GPA tell the story. Credentials follow results.",
+                  "Achievement (80) and Competition (80) as dominant motivators produce a natural orientation toward results and performance. That orientation is a professional asset — it generates the output that compounds credibility over time. The most durable form of professional credibility is a consistent track record, which is what New Wave, Riskr, and sustained academic performance represent.",
+                action: "Let New Wave, Riskr, and the GPA carry the argument. Credibility compounds through execution.",
               },
             ].map((item) => (
               <div
