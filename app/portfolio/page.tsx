@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, TrendingUp, Code, Users, Award, BarChart2, X, ArrowRight } from "lucide-react";
+import { ExternalLink, TrendingUp, Code, Users, Award, X, ArrowRight } from "lucide-react";
 import FadeIn from "@/components/motion/FadeIn";
 
 type Theme = {
@@ -68,6 +68,7 @@ const projects: Project[] = [
     link: "https://newwavecosmetics.com/",
     linkLabel: "Shop New Wave",
     linkStyle: "business",
+    image: "/img-newwave.jpeg",
     theme: {
       heroBg: "linear-gradient(135deg, #78350f 0%, #92400e 35%, #b45309 65%, #d97706 100%)",
       accent: "#fbbf24",
@@ -92,6 +93,7 @@ const projects: Project[] = [
     link: "https://theriskr.com",
     linkLabel: "View project",
     linkStyle: "project",
+    image: "/img-riskr.png",
     description:
       "Riskr is an adventure discovery app I designed and built independently: a community-driven platform where users submit, rate, and discover adventure locations worldwide. I built the full product: front-end, back-end, maps integration, safety rating system, and community features.",
     what:
@@ -139,6 +141,7 @@ const projects: Project[] = [
     skills: ["Event Management", "Public Speaking", "Stakeholder Coordination", "Budget Management", "Leadership"],
     why:
       "SEA shows I can lead organizations, not just participate in them. Managing programming, speakers, and a community simultaneously demonstrates operational range beyond finance coursework.",
+    image: "/img-sea.jpeg",
     theme: {
       heroBg: "linear-gradient(135deg, #2e1065 0%, #4c1d95 40%, #6d28d9 75%, #7c3aed 100%)",
       accent: "#c4b5fd",
@@ -187,46 +190,13 @@ const projects: Project[] = [
       watermark: "★",
     },
   },
-  {
-    id: "scarbrough",
-    category: "Finance · Internship",
-    categoryLabel: "Finance Internship",
-    categoryIcon: BarChart2,
-    title: "Scarbrough Financial Group",
-    subtitle: "Asset management internship — research, modeling, and portfolio analysis",
-    dates: "Dec 2023 – Apr 2024",
-    role: "Asset Management Intern",
-    description:
-      "Scarbrough Financial Group is an independent asset management firm in San Rafael, CA. As an intern, I worked directly with portfolio managers on research, modeling, and analysis tasks that supported real allocation decisions.",
-    what:
-      "Authored macroeconomic and sector trend reports, built Excel models for portfolio tracking and scenario analysis, and shadowed portfolio managers through live decision-making processes.",
-    impact: [
-      "Authored multiple macroeconomic and sector research reports",
-      "Built Excel-based portfolio tracking and scenario analysis models",
-      "Direct exposure to real portfolio management decision-making",
-      "Developed investment research and financial modeling foundation",
-    ],
-    skills: ["Financial Modeling", "Investment Research", "Excel", "Macroeconomic Analysis", "Portfolio Management"],
-    why:
-      "This was my first direct exposure to institutional finance — where analysis has real consequences. It confirmed my interest in investment and portfolio management and gave me foundational skills I continue to apply.",
-    theme: {
-      heroBg: "linear-gradient(135deg, #0B1221 0%, #111827 40%, #1e293b 75%, #243047 100%)",
-      accent: "#C8983A",
-      accentText: "#D4A843",
-      badgeBg: "rgba(200,152,58,0.12)",
-      badgeText: "#D4A843",
-      badgeBorder: "rgba(200,152,58,0.25)",
-      cardBorder: "border-slate-200",
-      cardAccent: "from-slate-700 to-slate-500",
-      watermark: "∑",
-    },
-  },
 ];
 
 /* ── Expanded overlay ──────────────────────────────────────────── */
 function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
   const t = p.theme;
   const [lightbox, setLightbox] = useState(false);
+  const [polaroidHovered, setPolaroidHovered] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -250,6 +220,23 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
       style={{ background: "rgba(6,11,24,0.85)", backdropFilter: "blur(16px)" }}
       onClick={onClose}
     >
+      {/* Polaroid enlarged preview — fixed, outside overflow:hidden modal */}
+      <AnimatePresence>
+        {polaroidHovered && p.image && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.85, y: 10 }}
+            transition={{ duration: 0.2 }}
+            className="fixed right-[calc(50%-28rem)] top-1/2 -translate-y-1/2 z-[55] pointer-events-none"
+          >
+            <div className="bg-white p-2.5 shadow-2xl" style={{ transform: "rotate(-1deg)", width: 260 }}>
+              <img src={p.image} alt="Project image" className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.97 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -284,19 +271,18 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
           {/* Polaroid image thumbnail */}
           {p.image && (
             <button
+              onMouseEnter={() => setPolaroidHovered(true)}
+              onMouseLeave={() => setPolaroidHovered(false)}
               onClick={(e) => { e.stopPropagation(); setLightbox(true); }}
-              className="absolute right-10 top-1/2 -translate-y-1/2 z-10 group"
-              aria-label={`View ${p.imageLabel ?? "image"}`}
+              className="absolute right-14 top-1/2 -translate-y-1/2 z-10 cursor-pointer"
+              aria-label="View image"
             >
-              <motion.div
-                className="bg-white p-1.5 shadow-xl"
-                style={{ width: 90 }}
-                initial={{ rotate: 2 }}
-                whileHover={{ scale: 1.6, rotate: 0, boxShadow: "0 25px 50px rgba(0,0,0,0.4)" }}
-                transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
+              <div
+                className="bg-white p-1.5 shadow-xl transition-opacity duration-200"
+                style={{ transform: "rotate(2deg)", width: 80 }}
               >
-                <img src={p.image} alt={p.imageLabel ?? "Project image"} className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
-              </motion.div>
+                <img src={p.image} alt="Project image" className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
+              </div>
             </button>
           )}
 
