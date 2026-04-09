@@ -98,9 +98,20 @@ export default function Home() {
 
           <div className="max-w-4xl">
             <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="mb-8"
+            >
+              <div className="w-20 h-20 rounded-full overflow-hidden ring-2 ring-gold-400/60 ring-offset-2 ring-offset-transparent">
+                <img src="/headshot.png" alt="David Finney" className="w-full h-full object-cover" />
+              </div>
+            </motion.div>
+
+            <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{ duration: 0.5, delay: 0.05, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="flex items-center gap-3 mb-8"
             >
               <span className="font-black text-2xl tracking-[0.2em] text-white">

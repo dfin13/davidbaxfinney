@@ -42,10 +42,10 @@ export default function PersonaEvolution() {
               transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-tight"
             >
-              The gap between{" "}
-              <span className="gradient-text">intention</span>
+              Peers saw more in me{" "}
+              <span className="gradient-text">than I saw</span>
               <br />
-              and impression.
+              in myself.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -53,8 +53,9 @@ export default function PersonaEvolution() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-xl text-slate-300 leading-relaxed max-w-2xl"
             >
-              Most people assume others experience them the way they experience themselves.
-              The data says otherwise. The gap is where the real professional work begins.
+              Through a structured communication assessment in BCOM 314, I discovered that my peers
+              consistently rate me higher than I rate myself. More engaging, more dynamic, more present.
+              That&apos;s a good problem to have.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -82,7 +83,7 @@ export default function PersonaEvolution() {
             <FadeIn>
               <div className="section-divider mb-5" />
               <h2 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight mb-6">
-                I self-identify as a Driver, but others consistently experience me as Expressive
+                My peers rated me as more engaging, more energetic, and more socially present than I give myself credit for
               </h2>
               <div className="space-y-4 text-slate-700 leading-relaxed text-sm">
                 <p>
@@ -101,9 +102,9 @@ export default function PersonaEvolution() {
                   only through structure and precision.
                 </p>
                 <p>
-                  The gap between these two profiles is not a contradiction. It is a diagnostic. It
-                  reveals something specific about where my internal experience and my external presence
-                  diverge, and why.
+                  The two profiles aren&apos;t contradictory. They&apos;re complementary. My peers weren&apos;t being
+                  generous — they were being accurate. I have more range than I&apos;d given myself credit for,
+                  and the data makes that concrete.
                 </p>
               </div>
             </FadeIn>
@@ -113,7 +114,7 @@ export default function PersonaEvolution() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-navy-900 rounded-2xl p-6 border border-white/8">
                   <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">
-                    How I See Myself
+                    My Self-Assessment
                   </p>
                   <p className="text-2xl font-black text-white mb-1">Driver</p>
                   <p className="text-xs text-slate-400 leading-relaxed">
@@ -130,7 +131,7 @@ export default function PersonaEvolution() {
                 </div>
                 <div className="bg-gold-400/10 rounded-2xl p-6 border border-gold-400/25">
                   <p className="text-xs font-bold text-gold-600 uppercase tracking-widest mb-3">
-                    How Others See Me
+                    How Peers See Me
                   </p>
                   <p className="text-2xl font-black text-navy-900 mb-1">Expressive</p>
                   <p className="text-xs text-slate-500 leading-relaxed">
@@ -149,7 +150,7 @@ export default function PersonaEvolution() {
 
               <div className="bg-slate-50 rounded-xl border border-slate-100 p-5">
                 <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">
-                  The Proactivity Delta
+                  Peers Rate Me 5x Higher on Outward Energy
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="flex-1">
@@ -173,7 +174,7 @@ export default function PersonaEvolution() {
                   </div>
                 </div>
                 <p className="text-xs text-slate-500 mt-3">
-                  Peers score me 5.2 points higher on outward proactivity than I score myself.
+                  My peers see significantly more energy, initiative, and presence than I report in myself — a pattern that shows up consistently across every dimension of the assessment.
                 </p>
               </div>
             </FadeIn>
@@ -187,11 +188,11 @@ export default function PersonaEvolution() {
           <FadeIn className="max-w-2xl mb-10">
             <div className="section-divider mb-5" />
             <h2 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight mb-4">
-              The mismatch is structural: three reasons it&apos;s coherent, not contradictory
+              Why peers see more than I report: three reasons this result is consistent, not surprising
             </h2>
             <p className="text-slate-600 leading-relaxed text-sm">
-              A gap between self-perception and reputation isn&apos;t arbitrary. It has structural
-              causes. Understanding those causes is what turns data into strategy.
+              When peers consistently rate someone higher than they rate themselves, there&apos;s a reason.
+              Understanding it is what makes the result useful rather than just interesting.
             </p>
           </FadeIn>
 

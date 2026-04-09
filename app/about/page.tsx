@@ -164,6 +164,15 @@ export default function About() {
 
             {/* Sidebar */}
             <div className="lg:col-span-2 space-y-5">
+              {/* Headshot */}
+              <FadeIn delay={0.05}>
+                <div className="flex justify-center lg:justify-start">
+                  <div className="w-36 h-36 rounded-full overflow-hidden ring-4 ring-gold-400/40 ring-offset-4 ring-offset-white shadow-xl">
+                    <img src="/headshot.png" alt="David Finney" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+              </FadeIn>
+
               {/* Quick facts */}
               <FadeIn delay={0.1}>
                 <div className="bg-slate-50 rounded-2xl p-7 border border-slate-100">
