@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, TrendingUp, Code, Users, Award, X, ArrowRight } from "lucide-react";
 import FadeIn from "@/components/motion/FadeIn";
@@ -141,6 +142,9 @@ const projects: Project[] = [
     skills: ["Event Management", "Public Speaking", "Stakeholder Coordination", "Budget Management", "Leadership"],
     why:
       "SEA shows I can lead organizations, not just participate in them. Managing programming, speakers, and a community simultaneously demonstrates operational range beyond finance coursework.",
+    link: "https://www.linkedin.com/company/student-entrepreneurs-association/",
+    linkLabel: "View on LinkedIn",
+    linkStyle: "project",
     image: "/img-sea.jpeg",
     theme: {
       heroBg: "linear-gradient(135deg, #2e1065 0%, #4c1d95 40%, #6d28d9 75%, #7c3aed 100%)",
@@ -176,6 +180,9 @@ const projects: Project[] = [
     skills: ["Financial Analysis", "Strategic Consulting", "Presentation", "Team Leadership", "Problem Solving"],
     why:
       "Winning a case competition under time pressure, in a live setting, with judges from the professional world is one of the cleanest signals of analytical and communication ability available to a student.",
+    link: "https://www.linkedin.com/posts/davidbfinney_last-semester-i-was-part-of-the-team-that-activity-7421668631316553728-criD?utm_source=share&utm_medium=member_desktop&rcm=ACoAACqFohQBSQN3TZHuE6h6rBaKQ0DLeUiGYwA",
+    linkLabel: "View post",
+    linkStyle: "project",
     image: "/cert-case-comp.jpeg",
     imageLabel: "First Place Certificate",
     theme: {
@@ -220,23 +227,6 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
       style={{ background: "rgba(6,11,24,0.85)", backdropFilter: "blur(16px)" }}
       onClick={onClose}
     >
-      {/* Polaroid enlarged preview — fixed, outside overflow:hidden modal */}
-      <AnimatePresence>
-        {polaroidHovered && p.image && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.85, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.85, y: 10 }}
-            transition={{ duration: 0.2 }}
-            className="fixed right-[calc(50%-28rem)] top-1/2 -translate-y-1/2 z-[55] pointer-events-none"
-          >
-            <div className="bg-white p-2.5 shadow-2xl" style={{ transform: "rotate(-1deg)", width: 260 }}>
-              <img src={p.image} alt="Project image" className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.97 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -417,6 +407,23 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Portal: enlarged polaroid — renders into body, bypasses all overflow:hidden */}
+      {polaroidHovered && p.image && createPortal(
+        <motion.div
+          initial={{ opacity: 0, scale: 0.88 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.88 }}
+          transition={{ duration: 0.18 }}
+          className="pointer-events-none"
+          style={{ position: "fixed", right: "10%", top: "50%", transform: "translateY(-60%) rotate(-2deg)", zIndex: 200, width: 280 }}
+        >
+          <div className="bg-white p-2.5 shadow-2xl">
+            <img src={p.image} alt="Project image" className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
+          </div>
+        </motion.div>,
+        document.body
+      )}
     </motion.div>
   );
 }
@@ -530,7 +537,7 @@ export default function Portfolio() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto"
             >
-              Five projects that show I can analyze, build, lead, and execute. Click any to open the full case study.
+              Four projects that show I can analyze, build, lead, and execute. Click any to open the full case study.
             </motion.p>
           </div>
         </div>
