@@ -1,10 +1,53 @@
 "use client";
 
+import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Info, X } from "lucide-react";
 import FadeIn from "@/components/motion/FadeIn";
+
+function InfoTooltip() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="relative inline-block">
+      <button
+        onClick={() => setOpen(!open)}
+        className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-gold-400 border border-white/10 hover:border-gold-400/30 rounded-full px-3 py-1.5 transition-all duration-200"
+        aria-label="About this assessment"
+      >
+        <Info size={12} />
+        About this assessment
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: 6, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 4, scale: 0.97 }}
+            transition={{ duration: 0.18 }}
+            className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-80 sm:w-96 bg-navy-900 border border-white/10 rounded-2xl px-5 py-4 shadow-2xl z-20 text-left"
+          >
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-3 right-3 text-slate-500 hover:text-white transition-colors"
+              aria-label="Close"
+            >
+              <X size={14} />
+            </button>
+            <p className="text-sm text-slate-300 leading-relaxed">
+              <strong className="text-white">Context:</strong> This page documents an assessment completed as part of{" "}
+              <strong className="text-white">BCOM 314 (Business Communication)</strong> at the University of Arizona. The
+              Self-Perception Inventory (SPI) and Professional Reputation Survey (PRS) are structured diagnostic tools used
+              in the course, not self-declared personality traits. I&apos;m sharing the results and my interpretation here
+              as a transparent record of that process, not as a definitive statement of who I am.
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 const StyleComparisonChart = dynamic(
   () => import("@/components/charts/StyleComparisonChart"),
@@ -25,7 +68,7 @@ export default function PersonaEvolution() {
       {/* ── HEADER ─────────────────────────────────────── */}
       <section className="bg-hero-gradient pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -43,15 +86,13 @@ export default function PersonaEvolution() {
               className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-tight"
             >
               Peers saw more in me{" "}
-              <span className="gradient-text">than I saw</span>
-              <br />
-              in myself.
+              <span className="gradient-text">than I saw in myself.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="text-xl text-slate-300 leading-relaxed max-w-2xl"
+              className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto"
             >
               Through a structured communication assessment in BCOM 314, I discovered that my peers
               consistently rate me higher than I rate myself. More engaging, more dynamic, more present.
@@ -61,16 +102,9 @@ export default function PersonaEvolution() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="mt-8 inline-flex items-start gap-3 bg-white/5 border border-white/10 rounded-2xl px-5 py-4 max-w-2xl"
+              className="mt-6 inline-block relative"
             >
-              <span className="text-gold-400 text-lg shrink-0 mt-0.5">ℹ</span>
-              <p className="text-sm text-slate-300 leading-relaxed">
-                <strong className="text-white">Context:</strong> This page documents an assessment completed as part of{" "}
-                <strong className="text-white">BCOM 314 (Business Communication)</strong> at the University of Arizona. The
-                Self-Perception Inventory (SPI) and Professional Reputation Survey (PRS) are structured diagnostic tools used
-                in the course, not self-declared personality traits. I&apos;m sharing the results and my interpretation here
-                as a transparent record of that process, not as a definitive statement of who I am.
-              </p>
+              <InfoTooltip />
             </motion.div>
           </div>
         </div>

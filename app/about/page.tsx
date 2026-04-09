@@ -63,7 +63,7 @@ export default function About() {
       {/* ── HEADER ─────────────────────────────────────────── */}
       <section className="bg-hero-gradient pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -81,15 +81,14 @@ export default function About() {
               className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-tight"
             >
               Finance student.{" "}
-              <span className="gradient-text">Operator.</span>
-              <br />
+              <span className="gradient-text">Operator.</span>{" "}
               Builder by instinct.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="text-lg text-slate-300 leading-relaxed max-w-2xl"
+              className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto"
             >
               Finance student. Co-founder. Builder. Here&apos;s the full picture.
             </motion.p>
