@@ -80,105 +80,113 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-20">
-          {/* DBF watermark */}
-          <div
-            className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
-            aria-hidden="true"
-            style={{
-              fontSize: "20rem",
-              fontWeight: 900,
-              letterSpacing: "-0.02em",
-              color: "transparent",
-              WebkitTextStroke: "1px rgba(200,152,58,0.06)",
-              lineHeight: 1,
-            }}
-          >
-            DBF
-          </div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          <div className="max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="flex items-center gap-3 mb-8"
-            >
-              <span className="font-black text-2xl tracking-[0.2em] text-white">
-                D<span className="text-gold-400">B</span>F
-              </span>
-              <span className="w-px h-5 bg-white/15" />
-              <span className="text-xs font-medium text-slate-400 tracking-[0.16em] uppercase">
-                David Bax Finney
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight mb-6"
-            >
-              Turning{" "}
-              <span className="gradient-text">ambition</span>
-              <br />
-              into outcomes.
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mb-10"
-            >
-              I&apos;m David Finney, a finance student at the University of Arizona&apos;s Eller College,
-              a co-founder generating real revenue, and a campus leader who builds things that matter.
-              Inspired by my parents: turn nothing into something.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="flex flex-wrap gap-4 mb-16"
-            >
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-500 active:scale-95 text-navy-950 font-bold text-sm px-6 py-3.5 rounded-full transition-all duration-200 shadow-lg shadow-gold-400/25 hover:shadow-gold-400/40"
+            {/* Left: text */}
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="flex items-center gap-3 mb-8"
               >
-                My Story <ArrowRight size={16} />
-              </Link>
-              <Link
-                href="/resume"
-                className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 active:scale-95 text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 hover:bg-white/5"
-              >
-                View Resume
-              </Link>
-              <a
-                href="https://www.youtube.com/watch?v=2hkoJ02Z4kc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 active:scale-95 text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 hover:bg-white/5"
-              >
-                <Play size={14} /> Watch Video
-              </a>
-            </motion.div>
+                <span className="font-black text-2xl tracking-[0.2em] text-white">
+                  D<span className="text-gold-400">B</span>F
+                </span>
+                <span className="w-px h-5 bg-white/15" />
+                <span className="text-xs font-medium text-slate-400 tracking-[0.16em] uppercase">
+                  David Bax Finney
+                </span>
+              </motion.div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-              {stats.map((s, i) => (
-                <motion.div
-                  key={s.value}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 + i * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 backdrop-blur-sm"
+              <motion.h1
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight mb-6"
+              >
+                Turning{" "}
+                <span className="gradient-text">ambition</span>
+                <br />
+                into outcomes.
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-10"
+              >
+                I&apos;m David Finney, a finance student at the University of Arizona&apos;s Eller College,
+                a co-founder generating real revenue, and a campus leader who builds things that matter.
+                Inspired by my parents: turn nothing into something.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="flex flex-wrap gap-4 mb-16"
+              >
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-500 active:scale-95 text-navy-950 font-bold text-sm px-6 py-3.5 rounded-full transition-all duration-200 shadow-lg shadow-gold-400/25 hover:shadow-gold-400/40"
                 >
-                  <p className="text-2xl font-black text-white">{s.value}</p>
-                  <p className="text-xs font-semibold text-gold-400 mt-0.5">{s.label}</p>
-                  <p className="text-xs text-slate-400 mt-0.5">{s.sub}</p>
-                </motion.div>
-              ))}
+                  My Story <ArrowRight size={16} />
+                </Link>
+                <Link
+                  href="/resume"
+                  className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 active:scale-95 text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 hover:bg-white/5"
+                >
+                  View Resume
+                </Link>
+                <a
+                  href="https://www.youtube.com/watch?v=2hkoJ02Z4kc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 active:scale-95 text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 hover:bg-white/5"
+                >
+                  <Play size={14} /> Watch Video
+                </a>
+              </motion.div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 gap-3">
+                {stats.map((s, i) => (
+                  <motion.div
+                    key={s.value}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 + i * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 backdrop-blur-sm"
+                  >
+                    <p className="text-2xl font-black text-white">{s.value}</p>
+                    <p className="text-xs font-semibold text-gold-400 mt-0.5">{s.label}</p>
+                    <p className="text-xs text-slate-400 mt-0.5">{s.sub}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
+
+            {/* Right: headshot */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="hidden lg:flex justify-center items-center"
+            >
+              <div className="relative">
+                {/* Glow */}
+                <div className="absolute inset-0 rounded-full bg-gold-400/20 blur-3xl scale-110 pointer-events-none" />
+                {/* Ring decoration */}
+                <div className="absolute inset-0 rounded-full border border-gold-400/20 scale-[1.08] pointer-events-none" />
+                {/* Photo */}
+                <div className="relative w-[380px] h-[380px] rounded-full overflow-hidden ring-2 ring-gold-400/40 ring-offset-4 ring-offset-transparent shadow-2xl">
+                  <img src="/headshot.png" alt="David Finney" className="w-full h-full object-cover" />
+                </div>
+              </div>
+            </motion.div>
+
           </div>
         </div>
 
