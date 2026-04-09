@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, TrendingUp, Code, Users, Award, X, ArrowRight } from "lucide-react";
 import FadeIn from "@/components/motion/FadeIn";
@@ -83,44 +82,6 @@ const projects: Project[] = [
     },
   },
   {
-    id: "riskr",
-    category: "Product Build · Solo Founder",
-    categoryLabel: "Product Build",
-    categoryIcon: Code,
-    title: "Riskr",
-    subtitle: "Adventure discovery platform built solo",
-    dates: "Jul 2025 – Nov 2025",
-    role: "Founder & Solo Developer",
-    link: "https://theriskr.com",
-    linkLabel: "View project",
-    linkStyle: "project",
-    image: "/img-riskr.png",
-    description:
-      "Riskr is an adventure discovery app I designed and built independently: a community-driven platform where users submit, rate, and discover adventure locations worldwide. I built the full product: front-end, back-end, maps integration, safety rating system, and community features.",
-    what:
-      "Sole designer, developer, and product strategist. I made every decision — from information architecture and UX flows to database design and community moderation logic.",
-    impact: [
-      "600+ user-submitted locations across 80+ countries",
-      "Full maps integration with safety ratings and community features",
-      "Solo build from concept to live product",
-      "Applied real product strategy: user research, feature prioritization, iteration",
-    ],
-    skills: ["Product Strategy", "Full-Stack Development", "UX Design", "Community Building", "Data Architecture"],
-    why:
-      "Riskr proves I can own an entire product from 0 to 1. It shows technical range, strategic judgment, and the ability to execute complex builds independently — a rare combination for a finance student.",
-    theme: {
-      heroBg: "linear-gradient(135deg, #0c1445 0%, #1e3a5f 40%, #1d4ed8 80%, #2563eb 100%)",
-      accent: "#60a5fa",
-      accentText: "#93c5fd",
-      badgeBg: "rgba(96,165,250,0.12)",
-      badgeText: "#93c5fd",
-      badgeBorder: "rgba(96,165,250,0.25)",
-      cardBorder: "border-blue-100",
-      cardAccent: "from-blue-600 to-blue-400",
-      watermark: "◈",
-    },
-  },
-  {
     id: "sea",
     category: "Campus Leadership · VP",
     categoryLabel: "Campus Leadership",
@@ -195,6 +156,44 @@ const projects: Project[] = [
       cardBorder: "border-emerald-100",
       cardAccent: "from-emerald-600 to-emerald-400",
       watermark: "★",
+    },
+  },
+  {
+    id: "riskr",
+    category: "Product Build · Solo Founder",
+    categoryLabel: "Product Build",
+    categoryIcon: Code,
+    title: "Riskr",
+    subtitle: "Adventure discovery platform built solo",
+    dates: "Jul 2025 – Nov 2025",
+    role: "Founder & Solo Developer",
+    link: "https://theriskr.com",
+    linkLabel: "View project",
+    linkStyle: "project",
+    image: "/img-riskr.png",
+    description:
+      "Riskr is an adventure discovery app I designed and built independently: a community-driven platform where users submit, rate, and discover adventure locations worldwide. I built the full product: front-end, back-end, maps integration, safety rating system, and community features.",
+    what:
+      "Sole designer, developer, and product strategist. I made every decision — from information architecture and UX flows to database design and community moderation logic.",
+    impact: [
+      "600+ user-submitted locations across 80+ countries",
+      "Full maps integration with safety ratings and community features",
+      "Solo build from concept to live product",
+      "Applied real product strategy: user research, feature prioritization, iteration",
+    ],
+    skills: ["Product Strategy", "Full-Stack Development", "UX Design", "Community Building", "Data Architecture"],
+    why:
+      "Riskr proves I can own an entire product from 0 to 1. It shows technical range, strategic judgment, and the ability to execute complex builds independently — a rare combination for a finance student.",
+    theme: {
+      heroBg: "linear-gradient(135deg, #0c1445 0%, #1e3a5f 40%, #1d4ed8 80%, #2563eb 100%)",
+      accent: "#60a5fa",
+      accentText: "#93c5fd",
+      badgeBg: "rgba(96,165,250,0.12)",
+      badgeText: "#93c5fd",
+      badgeBorder: "rgba(96,165,250,0.25)",
+      cardBorder: "border-blue-100",
+      cardAccent: "from-blue-600 to-blue-400",
+      watermark: "◈",
     },
   },
 ];
@@ -408,22 +407,24 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
         )}
       </AnimatePresence>
 
-      {/* Portal: enlarged polaroid — renders into body, bypasses all overflow:hidden */}
-      {polaroidHovered && p.image && createPortal(
-        <motion.div
-          initial={{ opacity: 0, scale: 0.88 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.88 }}
-          transition={{ duration: 0.18 }}
-          className="pointer-events-none"
-          style={{ position: "fixed", right: "10%", top: "50%", transform: "translateY(-60%) rotate(-2deg)", zIndex: 200, width: 280 }}
-        >
-          <div className="bg-white p-2.5 shadow-2xl">
-            <img src={p.image} alt="Project image" className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
-          </div>
-        </motion.div>,
-        document.body
-      )}
+      {/* Enlarged polaroid — absolute inside fixed backdrop, bypasses overflow:hidden */}
+      <AnimatePresence>
+        {polaroidHovered && p.image && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.88, rotate: -2 }}
+            animate={{ opacity: 1, scale: 1, rotate: -2 }}
+            exit={{ opacity: 0, scale: 0.88, rotate: -2 }}
+            transition={{ duration: 0.18 }}
+            className="pointer-events-none absolute"
+            style={{ right: "8%", top: "18%", zIndex: 200, width: 260 }}
+          >
+            <div className="bg-white p-3 shadow-2xl">
+              <img src={p.image} alt="Project image" className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
+              <div className="h-6" />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
