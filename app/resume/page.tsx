@@ -112,7 +112,7 @@ export default function Resume() {
   return (
     <>
       {/* Header */}
-      <section className="bg-hero-gradient pt-28 pb-16">
+      <section className="bg-hero-gradient pt-20 pb-12 sm:pt-24 sm:pb-14 lg:pt-28 lg:pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
             <div>

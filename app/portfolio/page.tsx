@@ -323,8 +323,8 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
           </div>
         </div>
 
-        {/* ── Content (no scroll) ── */}
-        <div className="flex-1 overflow-hidden grid sm:grid-cols-2 gap-0">
+        {/* ── Content ── */}
+        <div className="flex-1 overflow-y-auto sm:overflow-hidden grid sm:grid-cols-2 gap-0">
           {/* Left */}
           <div className="p-5 space-y-4 border-r border-slate-100">
             <div>
@@ -454,7 +454,7 @@ export default function Portfolio() {
       </AnimatePresence>
 
       {/* Header */}
-      <section className="bg-hero-gradient pt-28 pb-20">
+      <section className="bg-hero-gradient pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <motion.div

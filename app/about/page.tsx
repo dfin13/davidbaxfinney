@@ -61,7 +61,7 @@ export default function About() {
   return (
     <>
       {/* ── HEADER ─────────────────────────────────────────── */}
-      <section className="bg-hero-gradient pt-28 pb-20">
+      <section className="bg-hero-gradient pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <motion.div
@@ -91,17 +91,16 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-lg text-slate-300 leading-relaxed max-w-2xl"
             >
-              I grew up watching my parents turn nothing into something, a lesson that shaped
-              everything about how I approach business, relationships, and my own ambitions.
+              Finance student. Co-founder. Builder. Here&apos;s the full picture.
             </motion.p>
           </div>
         </div>
       </section>
 
       {/* ── BIO ──────────────────────────────────────────────── */}
-      <section className="bg-white py-24">
+      <section className="bg-white py-14 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-5 gap-16">
+          <div className="grid lg:grid-cols-5 gap-10 lg:gap-16">
             {/* Main bio */}
             <FadeIn className="lg:col-span-3">
               <div className="section-divider mb-5" />
@@ -245,7 +244,7 @@ export default function About() {
       </section>
 
       {/* ── VALUES ───────────────────────────────────────────── */}
-      <section className="bg-slate-50 py-24">
+      <section className="bg-slate-50 py-14 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-2xl mb-14">
             <div className="section-divider mb-5" />

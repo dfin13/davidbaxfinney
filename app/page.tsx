@@ -79,7 +79,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-20">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-16 lg:pt-28 lg:pb-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
             {/* Left: text */}
@@ -104,7 +104,6 @@ export default function Home() {
               >
                 I&apos;m David Finney, a finance student at the University of Arizona&apos;s Eller College,
                 a co-founder generating real revenue, and a campus leader who builds things that matter.
-                Inspired by my parents: turn nothing into something.
               </motion.p>
 
               <motion.div
@@ -125,14 +124,6 @@ export default function Home() {
                 >
                   View Resume
                 </Link>
-                <a
-                  href="https://www.youtube.com/watch?v=2hkoJ02Z4kc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 active:scale-95 text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 hover:bg-white/5"
-                >
-                  <Play size={14} /> Watch Video
-                </a>
               </motion.div>
 
               {/* Stats */}
@@ -182,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* ── VALUE PROPOSITION ────────────────────────────────── */}
-      <section className="bg-white py-28">
+      <section className="bg-white py-16 sm:py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-2xl mb-16">
             <div className="section-divider mb-5" />
@@ -216,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* ── PERSONA EVOLUTION TEASER ─────────────────────────── */}
-      <section className="bg-navy-900 py-28">
+      <section className="bg-navy-900 py-16 sm:py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
@@ -262,7 +253,7 @@ export default function Home() {
       </section>
 
       {/* ── PORTFOLIO PREVIEW ────────────────────────────────── */}
-      <section className="bg-slate-50 py-28">
+      <section className="bg-slate-50 py-16 sm:py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
             <div>
@@ -318,7 +309,7 @@ export default function Home() {
       </section>
 
       {/* ── VIDEO SECTION ─────────────────────────────────────── */}
-      <section className="bg-white py-28">
+      <section className="bg-white py-16 sm:py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
@@ -360,7 +351,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA BANNER ───────────────────────────────────────── */}
-      <section className="bg-navy-950 py-20">
+      <section className="bg-navy-950 py-14 sm:py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <FadeIn>
             <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">

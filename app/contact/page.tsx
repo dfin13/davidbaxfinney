@@ -71,7 +71,7 @@ export default function Contact() {
   return (
     <>
       {/* Header */}
-      <section className="bg-hero-gradient pt-28 pb-20">
+      <section className="bg-hero-gradient pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl">
             <motion.div
@@ -106,7 +106,7 @@ export default function Contact() {
       {/* Contact Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-5 gap-16">
+          <div className="grid lg:grid-cols-5 gap-10 lg:gap-16">
             {/* Left: Contact Info */}
             <div className="lg:col-span-2 space-y-5">
               <FadeIn>

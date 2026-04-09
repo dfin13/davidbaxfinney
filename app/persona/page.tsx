@@ -23,7 +23,7 @@ export default function PersonaEvolution() {
   return (
     <>
       {/* ── HEADER ─────────────────────────────────────── */}
-      <section className="bg-hero-gradient pt-28 pb-20">
+      <section className="bg-hero-gradient pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <motion.div
@@ -77,9 +77,9 @@ export default function PersonaEvolution() {
       </section>
 
       {/* ── SECTION 1: The Gap ─────────────────────────── */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <FadeIn>
               <div className="section-divider mb-5" />
               <h2 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight mb-6">
@@ -183,7 +183,7 @@ export default function PersonaEvolution() {
       </section>
 
       {/* ── SECTION 2: WHY the gap exists ──────────────── */}
-      <section className="bg-slate-50 py-20">
+      <section className="bg-slate-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-2xl mb-10">
             <div className="section-divider mb-5" />
@@ -238,7 +238,7 @@ export default function PersonaEvolution() {
       </section>
 
       {/* ── SECTION 3: Radar Chart ─────────────────────── */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-2xl mb-10">
             <div className="section-divider mb-5" />
@@ -280,7 +280,7 @@ export default function PersonaEvolution() {
       </section>
 
       {/* ── SECTION 4: Adjectives ──────────────────────── */}
-      <section className="bg-slate-50 py-20">
+      <section className="bg-slate-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-2xl mb-10">
             <div className="section-divider mb-5" />
@@ -314,9 +314,9 @@ export default function PersonaEvolution() {
       </section>
 
       {/* ── SECTION 5: Charisma ────────────────────────── */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-14 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
             <div>
               <div className="section-divider mb-5" />
               <h2 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight mb-5">
@@ -371,7 +371,7 @@ export default function PersonaEvolution() {
       </section>
 
       {/* ── SECTION 7: Implications ────────────────────── */}
-      <section className="bg-navy-900 py-20">
+      <section className="bg-navy-900 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-2xl mb-12">
             <div className="section-divider mb-5" />
@@ -426,7 +426,7 @@ export default function PersonaEvolution() {
       </section>
 
       {/* ── SECTION 8: Strategic Adjustments ──────────── */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-2xl mb-12">
             <div className="section-divider mb-5" />
@@ -502,7 +502,7 @@ export default function PersonaEvolution() {
       </section>
 
       {/* ── SECTION 9: Synthesis ───────────────────────── */}
-      <section className="bg-navy-950 py-20">
+      <section className="bg-navy-950 py-12 sm:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="section-divider mb-6" />
           <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-8">

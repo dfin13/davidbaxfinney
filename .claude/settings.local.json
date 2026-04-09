@@ -30,8 +30,8 @@
       "Bash(git branch:*)",
       "Bash(git remote:*)",
       "Bash(git push:*)",
-      "Read(//Users/davidfinney/Desktop/**)",
-      "Read(//Users/davidfinney/**)"
+      "Bash(sed -i '' 's/pt-28 pb-20/pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20/g' /Users/davidfinney/Desktop/PersonalPersona/app/contact/page.tsx /Users/davidfinney/Desktop/PersonalPersona/app/about/page.tsx /Users/davidfinney/Desktop/PersonalPersona/app/portfolio/page.tsx /Users/davidfinney/Desktop/PersonalPersona/app/persona/page.tsx)",
+      "Bash(sed -i '' 's/pt-28 pb-16/pt-20 pb-12 sm:pt-24 sm:pb-14 lg:pt-28 lg:pb-16/g' /Users/davidfinney/Desktop/PersonalPersona/app/resume/page.tsx)"
     ]
   }
 }
