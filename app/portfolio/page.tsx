@@ -289,13 +289,10 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
               aria-label={`View ${p.imageLabel ?? "image"}`}
             >
               <div
-                className="bg-white p-1.5 pb-5 shadow-xl transition-transform duration-200 group-hover:scale-105 group-hover:-rotate-1"
+                className="bg-white p-1.5 shadow-xl transition-all duration-300 group-hover:scale-[1.6] group-hover:rotate-0 group-hover:shadow-2xl"
                 style={{ transform: "rotate(2deg)", width: 90 }}
               >
                 <img src={p.image} alt={p.imageLabel ?? "Project image"} className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
-                {p.imageLabel && (
-                  <p className="text-center text-[7px] text-slate-400 mt-1.5 leading-tight font-medium tracking-wide uppercase truncate">{p.imageLabel}</p>
-                )}
               </div>
             </button>
           )}
@@ -427,9 +424,6 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
               className="max-w-3xl w-full"
             >
               <img src={p.image} alt={p.imageLabel ?? "Project image"} className="w-full rounded-2xl shadow-2xl" />
-              {p.imageLabel && (
-                <p className="text-center text-sm text-slate-400 mt-3 tracking-wide">{p.imageLabel}</p>
-              )}
             </motion.div>
           </motion.div>
         )}
