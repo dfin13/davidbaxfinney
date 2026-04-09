@@ -288,12 +288,15 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
               className="absolute right-10 top-1/2 -translate-y-1/2 z-10 group"
               aria-label={`View ${p.imageLabel ?? "image"}`}
             >
-              <div
-                className="bg-white p-1.5 shadow-xl transition-all duration-300 group-hover:scale-[1.6] group-hover:rotate-0 group-hover:shadow-2xl"
-                style={{ transform: "rotate(2deg)", width: 90 }}
+              <motion.div
+                className="bg-white p-1.5 shadow-xl"
+                style={{ width: 90 }}
+                initial={{ rotate: 2 }}
+                whileHover={{ scale: 1.6, rotate: 0, boxShadow: "0 25px 50px rgba(0,0,0,0.4)" }}
+                transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
               >
                 <img src={p.image} alt={p.imageLabel ?? "Project image"} className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
-              </div>
+              </motion.div>
             </button>
           )}
 
