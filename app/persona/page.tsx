@@ -365,38 +365,38 @@ export default function PersonaEvolution() {
               <div className="grid grid-cols-2 gap-4 mb-5">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-5 text-center">
                   <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide mb-2">Warmth</p>
-                  <p className="text-4xl font-black text-gold-500">6.36</p>
-                  <p className="text-xs text-slate-500 mt-1">/ 10</p>
+                  <p className="text-4xl font-black text-gold-500">+6.36</p>
+                  <p className="text-xs text-slate-400 mt-1">above baseline · scale −10 to +10</p>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-5 text-center">
                   <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide mb-2">Confidence</p>
-                  <p className="text-4xl font-black text-navy-800">3.64</p>
-                  <p className="text-xs text-slate-500 mt-1">/ 10</p>
+                  <p className="text-4xl font-black text-navy-800">+3.64</p>
+                  <p className="text-xs text-slate-400 mt-1">above baseline · scale −10 to +10</p>
                 </div>
               </div>
               <div className="bg-gold-400/10 border border-gold-400/25 rounded-xl p-5 mb-5">
                 <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">Charismatic Zone: Confirmed</p>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Both scores above the midpoint places me in the Charismatic Zone: perceived as
-                  simultaneously trustworthy and capable. This is the target zone for effective
-                  leaders and communicators.
+                  On a scale of −10 to +10, both scores are positive. Warmth at +6.36 and
+                  Confidence at +3.64 place me in the Charismatic Zone: perceived as simultaneously
+                  trustworthy and capable. This is the target profile for effective leaders and communicators.
                 </p>
               </div>
               <div className="bg-slate-50 border border-slate-100 rounded-xl p-5">
                 <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">What the Asymmetry Means</p>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Warmth outpaces Confidence by a significant margin (6.36 vs. 3.64). This means
-                  I&apos;m already trusted. The social foundation is there. The gap is that
-                  executive presence cues (vocal authority, deliberate pacing, commanding
-                  physical stillness) aren&apos;t yet matching my relational strength. These are
-                  learnable, not fixed, and this is my clearest near-term development target.
+                  Warmth is the more dominant signal right now (+6.36 vs. +3.64 on confidence),
+                  which means I&apos;m perceived as highly trustworthy with a strong relational
+                  presence. The growth edge is strengthening how authority registers: executive
+                  presence cues like vocal precision, deliberate pacing, and composed stillness.
+                  Both are already positive. The opportunity is to close the gap between them.
                 </p>
               </div>
             </div>
             <div
               className="bg-slate-50 rounded-2xl border border-slate-100 p-6"
               role="img"
-              aria-label="Scatter plot of Warmth vs. Confidence showing David positioned at Warmth 6.36, Confidence 3.64, in the Charismatic Zone (high warmth, moderate confidence)"
+              aria-label="Scatter plot of Warmth vs. Confidence on a −10 to +10 scale, showing David positioned at Warmth +6.36, Confidence +3.64 — both above baseline, in the Charismatic Zone"
             >
               <CharismaChart />
             </div>
@@ -486,7 +486,7 @@ export default function PersonaEvolution() {
               {
                 num: "02",
                 title: "Build Executive Presence",
-                evidence: "Charisma confidence 3.64 (below warmth by 2.72 points)",
+                evidence: "Charisma warmth +6.36 · confidence +3.64 · both above baseline on −10 to +10 scale",
                 insight:
                   "Trust is already there. The gap is authority projection: the vocal and physical cues that signal &ldquo;this person is in command.&rdquo; Research on charismatic leadership (Antonakis et al., 2011) identifies specific signals: metaphorical language, structured argumentation, controlled pacing, deliberate pause. These are trainable.",
                 action: "Slow down. Let silence do work. Seek out high-stakes speaking opportunities.",
