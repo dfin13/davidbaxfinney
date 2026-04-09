@@ -163,8 +163,8 @@ export default function Home() {
                 {/* Signature */}
                 <div className="mt-5 text-center">
                   <span
-                    style={{ fontFamily: "'Great Vibes', cursive", fontSize: "2.25rem", lineHeight: 1.2 }}
-                    className="text-gold-400 drop-shadow-[0_2px_12px_rgba(200,152,58,0.5)]"
+                    style={{ fontFamily: "'Brilliant Signature', cursive", fontSize: "2.75rem", lineHeight: 1.2 }}
+                    className="text-white drop-shadow-[0_2px_16px_rgba(255,255,255,0.25)]"
                   >
                     David Bax Finney
                   </span>
