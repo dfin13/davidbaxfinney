@@ -199,10 +199,9 @@ const projects: Project[] = [
 ];
 
 /* ── Expanded overlay ──────────────────────────────────────────── */
-function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
+function ProjectOverlay({ p, onClose, onImageHover }: { p: Project; onClose: () => void; onImageHover: (src: string | null) => void }) {
   const t = p.theme;
   const [lightbox, setLightbox] = useState(false);
-  const [polaroidHovered, setPolaroidHovered] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -260,14 +259,14 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
           {/* Polaroid image thumbnail */}
           {p.image && (
             <button
-              onMouseEnter={() => setPolaroidHovered(true)}
-              onMouseLeave={() => setPolaroidHovered(false)}
-              onClick={(e) => { e.stopPropagation(); setLightbox(true); }}
+              onMouseEnter={() => onImageHover(p.image!)}
+              onMouseLeave={() => onImageHover(null)}
+              onClick={(e) => { e.stopPropagation(); onImageHover(null); setLightbox(true); }}
               className="absolute right-14 top-1/2 -translate-y-1/2 z-10 cursor-pointer"
               aria-label="View image"
             >
               <div
-                className="bg-white p-1.5 shadow-xl transition-opacity duration-200"
+                className="bg-white p-1.5 shadow-xl"
                 style={{ transform: "rotate(2deg)", width: 80 }}
               >
                 <img src={p.image} alt="Project image" className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
@@ -407,24 +406,6 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
         )}
       </AnimatePresence>
 
-      {/* Enlarged polaroid — absolute inside fixed backdrop, bypasses overflow:hidden */}
-      <AnimatePresence>
-        {polaroidHovered && p.image && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.88, rotate: -2 }}
-            animate={{ opacity: 1, scale: 1, rotate: -2 }}
-            exit={{ opacity: 0, scale: 0.88, rotate: -2 }}
-            transition={{ duration: 0.18 }}
-            className="pointer-events-none absolute"
-            style={{ right: "8%", top: "18%", zIndex: 200, width: 260 }}
-          >
-            <div className="bg-white p-3 shadow-2xl">
-              <img src={p.image} alt="Project image" className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
-              <div className="h-6" />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.div>
   );
 }
@@ -501,15 +482,41 @@ function ProjectCard({ p, idx, onOpen }: { p: Project; idx: number; onOpen: () =
 /* ── Page ──────────────────────────────────────────────────────── */
 export default function Portfolio() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
   const selected = projects.find((p) => p.id === selectedId) ?? null;
 
   return (
     <>
       <AnimatePresence>
         {selected && (
-          <ProjectOverlay p={selected} onClose={() => setSelectedId(null)} />
+          <ProjectOverlay
+            p={selected}
+            onClose={() => { setSelectedId(null); setHoveredImage(null); }}
+            onImageHover={setHoveredImage}
+          />
         )}
       </AnimatePresence>
+
+      {/* Enlarged polaroid — rendered at page root, position:fixed has no parent transforms */}
+      {hoveredImage && (
+        <div
+          className="pointer-events-none"
+          style={{
+            position: "fixed",
+            right: "8%",
+            top: "20%",
+            zIndex: 9999,
+            width: 260,
+            transform: "rotate(-2deg)",
+            transition: "opacity 0.15s ease",
+          }}
+        >
+          <div style={{ background: "#fff", padding: 10, boxShadow: "0 20px 60px rgba(0,0,0,0.35)" }}>
+            <img src={hoveredImage} alt="Project" style={{ width: "100%", display: "block", aspectRatio: "4/3", objectFit: "cover" }} />
+            <div style={{ height: 24 }} />
+          </div>
+        </div>
+      )}
 
       {/* Header */}
       <section className="bg-hero-gradient pt-20 pb-14 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
