@@ -302,7 +302,12 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
               )}
             </div>
 
-            <h2 className="text-2xl font-black text-white leading-tight tracking-tight mb-1">{p.title}</h2>
+            <h2
+              className="text-2xl font-black text-white leading-tight tracking-tight mb-1"
+              style={p.id === "new-wave" ? { fontFamily: "'Cyber Brush', sans-serif", fontSize: "2rem", letterSpacing: "0.02em" } : undefined}
+            >
+              {p.id === "new-wave" ? "New Wave" : p.title}
+            </h2>
             <div className="flex items-center gap-3 flex-wrap">
               <p className="text-xs" style={{ color: "rgba(255,255,255,0.6)" }}>{p.role} · {p.dates}</p>
               {p.link && p.linkStyle === "business" && (
