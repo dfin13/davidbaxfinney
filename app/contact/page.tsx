@@ -43,6 +43,7 @@ export default function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [serverError, setServerError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -63,9 +64,20 @@ export default function Contact() {
     if (!formState.message.trim()) newErrors.message = "Message is required.";
     if (Object.keys(newErrors).length > 0) { setErrors(newErrors); return; }
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 900));
-    setLoading(false);
-    setSubmitted(true);
+    setServerError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
+      if (!res.ok) throw new Error("Send failed");
+      setSubmitted(true);
+    } catch {
+      setServerError("Something went wrong. Please email me directly at davidbaxfinney@gmail.com.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -282,6 +294,10 @@ export default function Contact() {
                       />
                       {errors.message && <p id="error-message" className="text-red-500 text-xs mt-1.5">{errors.message}</p>}
                     </div>
+
+                    {serverError && (
+                      <p className="text-red-500 text-sm">{serverError}</p>
+                    )}
 
                     <motion.button
                       type="submit"
