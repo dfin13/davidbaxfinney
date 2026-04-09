@@ -64,7 +64,7 @@ const projects: Project[] = [
     ],
     skills: ["Financial Modeling", "Operations", "Unit Economics", "Brand Strategy", "Retail Distribution"],
     why:
-      "New Wave demonstrates that I don't just analyze businesses. I build them. It proves I can take an idea from concept to commercial reality while managing finance, logistics, and strategy simultaneously.",
+      "New Wave is a functioning business with auditable margins, a placed production order, and active retail distribution — built without outside capital while enrolled full-time. The financial and operational scope is documented above.",
     link: "https://newwavecosmetics.com/",
     linkLabel: "Shop New Wave",
     linkStyle: "business",
@@ -102,7 +102,7 @@ const projects: Project[] = [
     ],
     skills: ["Event Management", "Public Speaking", "Stakeholder Coordination", "Budget Management", "Leadership"],
     why:
-      "SEA shows I can lead organizations, not just participate in them. Managing programming, speakers, and a community simultaneously demonstrates operational range beyond finance coursework.",
+      "Holding a VP role while running a company and maintaining a 3.90 GPA reflects a consistent operating pace. The SEA work is real organizational management: budget, programming, speakers, and member engagement with measurable outputs each semester.",
     link: "https://www.linkedin.com/company/student-entrepreneurs-association/",
     linkLabel: "View on LinkedIn",
     linkStyle: "project",
@@ -140,7 +140,7 @@ const projects: Project[] = [
     ],
     skills: ["Financial Analysis", "Strategic Consulting", "Presentation", "Team Leadership", "Problem Solving"],
     why:
-      "Winning a case competition under time pressure, in a live setting, with judges from the professional world is one of the cleanest signals of analytical and communication ability available to a student.",
+      "A first-place finish in a university-wide competition judged by working professionals, requiring financial modeling, strategic framing, and live presentation under time pressure. The certificate is documented above.",
     link: "https://www.linkedin.com/posts/davidbfinney_last-semester-i-was-part-of-the-team-that-activity-7421668631316553728-criD?utm_source=share&utm_medium=member_desktop&rcm=ACoAACqFohQBSQN3TZHuE6h6rBaKQ0DLeUiGYwA",
     linkLabel: "View post",
     linkStyle: "project",
@@ -183,7 +183,7 @@ const projects: Project[] = [
     ],
     skills: ["Product Strategy", "Full-Stack Development", "UX Design", "Community Building", "Data Architecture"],
     why:
-      "Riskr proves I can own an entire product from 0 to 1. It shows technical range, strategic judgment, and the ability to execute complex builds independently — a rare combination for a finance student.",
+      "Riskr is a live product with real users, built entirely solo: front-end, back-end, maps, community, and moderation logic. The scope and execution detail are above — 600+ locations across 80+ countries is not a side project.",
     theme: {
       heroBg: "linear-gradient(135deg, #0c1445 0%, #1e3a5f 40%, #1d4ed8 80%, #2563eb 100%)",
       accent: "#60a5fa",
@@ -536,8 +536,8 @@ export default function Portfolio() {
               transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-tight"
             >
-              Work that{" "}
-              <span className="gradient-text">proves the point.</span>
+              Selected{" "}
+              <span className="gradient-text">work.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -545,7 +545,7 @@ export default function Portfolio() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto"
             >
-              Four projects that show I can analyze, build, lead, and execute. Click any to open the full case study.
+              Four projects across finance, product, leadership, and brand-building. Each one is documented in full — click to open.
             </motion.p>
           </div>
         </div>
@@ -567,10 +567,10 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <FadeIn>
             <h2 className="text-2xl font-black text-navy-900 mb-4">
-              Want to talk about any of these?
+              Questions about any of these?
             </h2>
             <p className="text-slate-600 mb-8">
-              I&apos;m happy to go deeper on strategy, execution, or the lessons from any project.
+              Happy to discuss the detail behind any project — strategy, financials, execution, or what came next.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
