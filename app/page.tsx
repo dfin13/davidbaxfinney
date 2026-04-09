@@ -84,21 +84,6 @@ export default function Home() {
 
             {/* Left: text */}
             <div>
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="flex items-center gap-3 mb-8"
-              >
-                <span className="font-black text-2xl tracking-[0.2em] text-white">
-                  D<span className="text-gold-400">B</span>F
-                </span>
-                <span className="w-px h-5 bg-white/15" />
-                <span className="text-xs font-medium text-slate-400 tracking-[0.16em] uppercase">
-                  David Bax Finney
-                </span>
-              </motion.div>
-
               <motion.h1
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -181,7 +166,7 @@ export default function Home() {
                 {/* Ring decoration */}
                 <div className="absolute inset-0 rounded-full border border-gold-400/20 scale-[1.08] pointer-events-none" />
                 {/* Photo */}
-                <div className="relative w-[380px] h-[380px] rounded-full overflow-hidden ring-2 ring-gold-400/40 ring-offset-4 ring-offset-transparent shadow-2xl">
+                <div className="relative w-[300px] h-[300px] rounded-full overflow-hidden ring-2 ring-gold-400/40 ring-offset-4 ring-offset-transparent shadow-2xl">
                   <img src="/headshot.png" alt="David Finney" className="w-full h-full object-cover" />
                 </div>
               </div>
