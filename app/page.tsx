@@ -160,6 +160,15 @@ export default function Home() {
                 <div className="relative w-[300px] h-[300px] rounded-full overflow-hidden ring-2 ring-gold-400/40 ring-offset-4 ring-offset-transparent shadow-2xl">
                   <img src="/headshot.png" alt="David Finney" className="w-full h-full object-cover" />
                 </div>
+                {/* Signature */}
+                <div className="mt-5 text-center">
+                  <span
+                    style={{ fontFamily: "'Great Vibes', cursive", fontSize: "2.25rem", lineHeight: 1.2 }}
+                    className="text-gold-400 drop-shadow-[0_2px_12px_rgba(200,152,58,0.5)]"
+                  >
+                    David Bax Finney
+                  </span>
+                </div>
               </div>
             </motion.div>
 
