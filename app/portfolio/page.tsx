@@ -36,6 +36,8 @@ type Project = {
   linkLabel?: string;
   linkStyle?: "business" | "project";
   featured?: boolean;
+  image?: string;
+  imageLabel?: string;
   theme: Theme;
 };
 
@@ -171,6 +173,8 @@ const projects: Project[] = [
     skills: ["Financial Analysis", "Strategic Consulting", "Presentation", "Team Leadership", "Problem Solving"],
     why:
       "Winning a case competition under time pressure, in a live setting, with judges from the professional world is one of the cleanest signals of analytical and communication ability available to a student.",
+    image: "/cert-case-comp.jpeg",
+    imageLabel: "First Place Certificate",
     theme: {
       heroBg: "linear-gradient(135deg, #064e3b 0%, #065f46 40%, #059669 75%, #10b981 100%)",
       accent: "#6ee7b7",
@@ -222,16 +226,19 @@ const projects: Project[] = [
 /* ── Expanded overlay ──────────────────────────────────────────── */
 function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
   const t = p.theme;
+  const [lightbox, setLightbox] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    const handleKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { if (lightbox) setLightbox(false); else onClose(); }
+    };
     window.addEventListener("keydown", handleKey);
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKey);
     };
-  }, [onClose]);
+  }, [onClose, lightbox]);
 
   return (
     <motion.div
@@ -264,7 +271,7 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
             }}
           />
           {/* Watermark */}
-          {p.theme.watermark && (
+          {p.theme.watermark && !p.image && (
             <div
               className="absolute right-4 bottom-0 select-none pointer-events-none"
               style={{ fontSize: "7rem", color: "rgba(255,255,255,0.06)", fontWeight: 900, lineHeight: 1 }}
@@ -272,6 +279,25 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
             >
               {p.theme.watermark}
             </div>
+          )}
+
+          {/* Polaroid image thumbnail */}
+          {p.image && (
+            <button
+              onClick={(e) => { e.stopPropagation(); setLightbox(true); }}
+              className="absolute right-10 top-1/2 -translate-y-1/2 z-10 group"
+              aria-label={`View ${p.imageLabel ?? "image"}`}
+            >
+              <div
+                className="bg-white p-1.5 pb-5 shadow-xl transition-transform duration-200 group-hover:scale-105 group-hover:-rotate-1"
+                style={{ transform: "rotate(2deg)", width: 90 }}
+              >
+                <img src={p.image} alt={p.imageLabel ?? "Project image"} className="w-full object-cover block" style={{ aspectRatio: "4/3" }} />
+                {p.imageLabel && (
+                  <p className="text-center text-[7px] text-slate-400 mt-1.5 leading-tight font-medium tracking-wide uppercase truncate">{p.imageLabel}</p>
+                )}
+              </div>
+            </button>
           )}
 
           {/* Close */}
@@ -372,6 +398,42 @@ function ProjectOverlay({ p, onClose }: { p: Project; onClose: () => void }) {
           </div>
         </div>
       </motion.div>
+
+      {/* ── Lightbox ── */}
+      <AnimatePresence>
+        {lightbox && p.image && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[60] flex items-center justify-center p-6"
+            style={{ background: "rgba(0,0,0,0.92)" }}
+            onClick={() => setLightbox(false)}
+          >
+            <button
+              onClick={() => setLightbox(false)}
+              className="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              aria-label="Close image"
+            >
+              <X size={16} className="text-white" />
+            </button>
+            <motion.div
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.92, opacity: 0 }}
+              transition={{ duration: 0.22 }}
+              onClick={(e) => e.stopPropagation()}
+              className="max-w-3xl w-full"
+            >
+              <img src={p.image} alt={p.imageLabel ?? "Project image"} className="w-full rounded-2xl shadow-2xl" />
+              {p.imageLabel && (
+                <p className="text-center text-sm text-slate-400 mt-3 tracking-wide">{p.imageLabel}</p>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
