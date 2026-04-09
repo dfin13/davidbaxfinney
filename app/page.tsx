@@ -34,31 +34,31 @@ const portfolioPreviews = [
   {
     label: "Consumer Brand",
     title: "New Wave Cosmetics",
-    desc: "~1,000% per-unit margins, profitable within months, 10K-unit production order placed. A real business built from scratch.",
+    desc: "~1,000% per-unit margins, profitable within months, 10K-unit production order placed. Built from zero, no outside capital.",
     tags: ["Operations", "Finance", "Brand Strategy"],
     href: "/portfolio",
   },
   {
     label: "Product Build",
     title: "Riskr",
-    desc: "Solo-built adventure discovery app with 600+ locations across 80+ countries, maps, and safety ratings.",
+    desc: "Solo-built adventure discovery platform: 600+ locations across 80+ countries, full maps integration, community-rated safety data.",
     tags: ["Product Strategy", "Dev", "UX"],
     href: "/portfolio",
   },
   {
-    label: "Finance Internship",
-    title: "Scarbrough Financial Group",
-    desc: "Asset management internship: Excel models, sector research, and portfolio scenario analysis.",
-    tags: ["Financial Modeling", "Research", "Investing"],
+    label: "Campus Leadership",
+    title: "Student Entrepreneurs Association",
+    desc: "VP of the premier entrepreneurship organization at UofA: 30+ members, 5+ speakers per semester, full event and budget ownership.",
+    tags: ["Leadership", "Operations", "Programming"],
     href: "/portfolio",
   },
 ];
 
 const personaCards = [
-  { label: "Self-Perception Style", value: "Driver", sub: "Task-oriented · Decisive · Direct" },
-  { label: "Others Perceive Me As", value: "Expressive", sub: "Dynamic · Engaging · Impactful" },
-  { label: "Charisma Zone", value: "Charismatic", sub: "Warmth 6.36 · Confidence 3.64" },
-  { label: "Top Motivator", value: "Networking", sub: "94 / 100 score" },
+  { label: "Internal Operating Style", value: "Driver", sub: "Task-oriented · Decisive · Direct" },
+  { label: "External Perception", value: "Expressive", sub: "Dynamic · Engaging · Impactful" },
+  { label: "Charisma Profile", value: "Charismatic", sub: "Warmth +6.36 · Confidence +3.64" },
+  { label: "Motivator Profile", value: "Achievement", sub: "Results-driven · Competitive · 80/100" },
 ];
 
 export default function Home() {
@@ -102,8 +102,8 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                 className="text-lg sm:text-xl text-slate-300 leading-relaxed mb-10"
               >
-                I&apos;m David Finney, a finance student at the University of Arizona&apos;s Eller College,
-                a co-founder generating real revenue, and a campus leader who builds things that matter.
+                Finance student at the University of Arizona&apos;s Eller College. Co-founder.
+                Operator. The work is real, the numbers are auditable, and the direction is clear.
               </motion.p>
 
               <motion.div
@@ -178,11 +178,12 @@ export default function Home() {
           <FadeIn className="max-w-2xl mb-16">
             <div className="section-divider mb-5" />
             <h2 className="text-3xl sm:text-4xl font-black text-navy-900 tracking-tight mb-4">
-              Analyst mindset. Founder instinct. Leader by default.
+              Analyst mindset. Founder instinct. Operator in practice.
             </h2>
             <p className="text-slate-600 leading-relaxed">
-              Most people pick one lane. I&apos;m building credentials across three because the
-              best operators I admire understand markets, build products, and move people.
+              Finance trained the thinking: precise, data-driven, grounded in fundamentals.
+              Entrepreneurship trained the judgment: ownership, execution, and building under real constraints.
+              Both are active, not aspirational.
             </p>
           </FadeIn>
 
@@ -213,25 +214,25 @@ export default function Home() {
             <FadeIn>
               <div className="section-divider mb-5" />
               <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-5">
-                Inside the gap between{" "}
-                <span className="gradient-text">who I think I am</span>{" "}
-                and who others see.
+                Two behavioral profiles.{" "}
+                <span className="gradient-text">One integrated picture.</span>
               </h2>
               <p className="text-slate-300 leading-relaxed mb-6">
-                Through structured diagnostics in BCOM 314, I mapped my communication style,
-                reputation, motivators, and charisma, and discovered a meaningful gap between my
-                self-perception as a direct, decisive Driver and how others experience me: dynamic,
-                engaging, and expressive.
+                Structured diagnostics in BCOM 314 mapped communication style, professional
+                reputation, motivators, and charisma across two instruments. The SPI places me
+                as a Driver: decisive, structured, execution-oriented. The PRS adds a second
+                layer — peers consistently rate the external signal as Expressive: dynamic,
+                engaging, and socially authoritative. Both are accurate. Both are useful.
               </p>
               <p className="text-slate-400 leading-relaxed mb-8">
-                Understanding that gap and closing it with intention is the foundation of a
-                strong professional persona.
+                The full assessment — and what it means for how I operate in teams, leadership,
+                and high-stakes communication — is documented in detail.
               </p>
               <Link
                 href="/persona"
                 className="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-500 active:scale-95 text-navy-950 font-bold text-sm px-6 py-3.5 rounded-full transition-all duration-200"
               >
-                Explore My Persona Evolution <ArrowRight size={16} />
+                View the Full Assessment <ArrowRight size={16} />
               </Link>
             </FadeIn>
 
@@ -315,15 +316,16 @@ export default function Home() {
             <FadeIn>
               <div className="section-divider mb-5" />
               <h2 className="text-3xl sm:text-4xl font-black text-navy-900 tracking-tight mb-5">
-                My Professional Persona Video
+                Professional Persona Video
               </h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                In this video, I walk through who I am, what I&apos;m building, and how my professional
-                persona has evolved through self-reflection, peer feedback, and intentional growth.
+                A short video overview of the professional profile: operating style, external
+                perception, and the combination of analytical discipline and entrepreneurial execution
+                that defines the work.
               </p>
               <p className="text-slate-600 leading-relaxed mb-8">
-                It&apos;s a look at the intersection of my analytical foundation, entrepreneurial
-                ambition, and leadership experience, and where I&apos;m headed next.
+                Produced as part of BCOM 314 at the University of Arizona — the same course
+                behind the behavioral assessment documented on the Persona page.
               </p>
               <a
                 href="https://www.youtube.com/watch?v=2hkoJ02Z4kc"
@@ -358,7 +360,7 @@ export default function Home() {
               Let&apos;s connect.
             </h2>
             <p className="text-slate-400 mb-8 max-w-lg mx-auto">
-              Whether you&apos;re a recruiter, professional, or fellow builder, I&apos;d love to hear from you.
+              Recruiting inquiries, finance conversations, entrepreneurship, or networking — the contact page has all the relevant details.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

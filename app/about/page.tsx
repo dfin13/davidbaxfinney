@@ -18,19 +18,19 @@ const adjectives = [
 const values = [
   {
     title: "Execution Over Talk",
-    desc: "I measure myself by what I've actually built: revenue generated, products shipped, teams led. Credentials matter less than results.",
+    desc: "The measure is what has actually been built: revenue generated, products shipped, teams led. Results are the only credential that compounds.",
   },
   {
     title: "Analytical Rigor",
-    desc: "Finance trained my thinking to be precise, data-driven, and grounded. Every business decision I make runs through that filter.",
+    desc: "Finance trained the thinking to be precise, data-driven, and grounded in fundamentals. Every operational decision runs through that filter.",
   },
   {
-    title: "Relationships First",
-    desc: "My top motivator is networking and belonging. I believe trust is built over time, through consistent action and genuine connection.",
+    title: "Relational Credibility",
+    desc: "Trust is built through consistent action and genuine engagement over time. Strong professional relationships are the infrastructure for everything that follows.",
   },
   {
-    title: "Bias Toward Growth",
-    desc: "I co-founded a company while carrying a 3.90 GPA and serving as VP of an entrepreneurship organization. I'm comfortable in motion.",
+    title: "High Operating Pace",
+    desc: "Co-founding a company while carrying a 3.90 GPA and serving as VP of an entrepreneurship organization is not accidental — it reflects a deliberate operating mode.",
   },
 ];
 
@@ -81,8 +81,8 @@ export default function About() {
               className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-tight"
             >
               Finance student.{" "}
-              <span className="gradient-text">Operator.</span>{" "}
-              Builder by instinct.
+              <span className="gradient-text">Co-founder.</span>{" "}
+              Operator in practice.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -90,7 +90,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto"
             >
-              Finance student. Co-founder. Builder. Here&apos;s the full picture.
+              The full professional profile: background, operating approach, and what drives the work.
             </motion.p>
           </div>
         </div>
@@ -115,13 +115,11 @@ export default function About() {
                   frameworks that drive smart capital allocation.
                 </p>
                 <p>
-                  But finance alone doesn&apos;t capture what I do. In August 2025, I co-founded
-                  New Wave Cosmetics LLC alongside a partner, building a premium sea-salt haircare
-                  brand from scratch. We hit profitability through brick-and-mortar retail with
-                  approximately 1,000% per-unit margins, and placed a 10,000-unit
-                  production order to support expansion into e-commerce. Running a real business
-                  while enrolled full-time has sharpened my instincts in ways no classroom alone
-                  could replicate.
+                  Alongside the academic track, in August 2025 I co-founded New Wave Cosmetics LLC,
+                  a premium sea-salt haircare brand built from scratch with no outside capital. We
+                  reached profitability through brick-and-mortar retail distribution at approximately
+                  1,000% per-unit margins and placed a 10,000-unit production order to support
+                  e-commerce expansion. The company is active, profitable, and scaling.
                 </p>
                 <p>
                   I also built Riskr, an adventure discovery platform I designed and developed
@@ -282,10 +280,10 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <FadeIn>
             <h2 className="text-2xl font-black text-navy-900 mb-4">
-              Want the full picture?
+              Resume, portfolio, or direct contact.
             </h2>
             <p className="text-slate-600 mb-8">
-              See my resume, explore my persona evolution, or connect directly.
+              The resume has the full detail. The portfolio has the work. The contact page is direct.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {[
