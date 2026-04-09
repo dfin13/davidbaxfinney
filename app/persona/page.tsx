@@ -85,8 +85,8 @@ export default function PersonaEvolution() {
               transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-tight"
             >
-              Peers saw more in me{" "}
-              <span className="gradient-text">than I saw in myself.</span>
+              Two profiles.{" "}
+              <span className="gradient-text">One complete picture.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -94,9 +94,9 @@ export default function PersonaEvolution() {
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto"
             >
-              Through a structured communication assessment in BCOM 314, I discovered that my peers
-              consistently rate me higher than I rate myself. More engaging, more dynamic, more present.
-              That&apos;s a good problem to have.
+              A structured behavioral assessment in BCOM 314 produced two data points: how I operate
+              internally, and how that operating style registers with others. The result confirms both
+              dimensions — and the combination is more advantageous than either alone.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -110,35 +110,35 @@ export default function PersonaEvolution() {
         </div>
       </section>
 
-      {/* ── SECTION 1: The Gap ─────────────────────────── */}
+      {/* ── SECTION 1: The Profile ─────────────────────── */}
       <section className="bg-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             <FadeIn>
               <div className="section-divider mb-5" />
               <h2 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight mb-6">
-                My peers rated me as more engaging, more energetic, and more socially present than I give myself credit for
+                Internally structured and execution-focused. Externally engaging and socially dynamic. Both are accurate.
               </h2>
               <div className="space-y-4 text-slate-700 leading-relaxed text-sm">
                 <p>
-                  On the Self-Perception Inventory, I identified strongly as a <strong className="text-navy-900">Driver</strong>:
+                  The Self-Perception Inventory places me firmly in the <strong className="text-navy-900">Driver</strong> quadrant:
                   task-oriented, decisive, structured, and fast-moving. Drivers operate with a high
-                  focus on outcomes: they set a goal, build a plan, and execute with minimal distraction.
-                  My SPI composite placed me at proactivity&nbsp;1.0 / reactivity&nbsp;−3.0, indicating
-                  someone internally directed and deliberate rather than socially reactive.
+                  focus on outcomes — set a goal, build a plan, execute without distraction.
+                  My SPI composite (proactivity&nbsp;1.0 / reactivity&nbsp;−3.0) reflects someone
+                  internally directed and deliberate, not reactive to social cues.
                 </p>
                 <p>
-                  The Professional Reputation Survey told a meaningfully different story. My peers scored
-                  me at proactivity&nbsp;6.2 / reactivity&nbsp;1.4, placing me squarely in the{" "}
-                  <strong className="text-navy-900">Expressive</strong> quadrant. Expressives are
-                  described as energetic, socially engaging, relationship-forward, and outwardly dynamic.
-                  They generate energy in a room; they influence through presence and enthusiasm, not
-                  only through structure and precision.
+                  The Professional Reputation Survey adds a second layer. Peers scored me at
+                  proactivity&nbsp;6.2 / reactivity&nbsp;1.4, placing me in the{" "}
+                  <strong className="text-navy-900">Expressive</strong> quadrant: energetic, socially
+                  engaging, relationship-forward, outwardly dynamic. Expressives generate energy in a
+                  room and influence through presence as much as through precision.
                 </p>
                 <p>
-                  The two profiles aren&apos;t contradictory. They&apos;re complementary. My peers weren&apos;t being
-                  generous — they were being accurate. I have more range than I&apos;d given myself credit for,
-                  and the data makes that concrete.
+                  The two profiles are not in tension. They are additive. The Driver profile describes
+                  how I operate internally. The Expressive profile describes how that operating style
+                  lands externally. Together, they confirm a range that most professionals only develop
+                  one side of.
                 </p>
               </div>
             </FadeIn>
@@ -184,12 +184,12 @@ export default function PersonaEvolution() {
 
               <div className="bg-slate-50 rounded-xl border border-slate-100 p-5">
                 <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">
-                  Peers Rate Me 5x Higher on Outward Energy
+                  Outward Energy: Internal vs. External Read
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="flex-1">
                     <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-                      <span>Self-reported</span>
+                      <span>Internal (SPI)</span>
                       <span className="font-bold text-navy-900">1.0</span>
                     </div>
                     <div className="h-2 bg-slate-200 rounded-full">
@@ -199,7 +199,7 @@ export default function PersonaEvolution() {
                   <span className="text-slate-300 font-bold">vs</span>
                   <div className="flex-1">
                     <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-                      <span>Peer-reported</span>
+                      <span>External (PRS)</span>
                       <span className="font-bold text-gold-600">6.2</span>
                     </div>
                     <div className="h-2 bg-slate-200 rounded-full">
@@ -208,7 +208,7 @@ export default function PersonaEvolution() {
                   </div>
                 </div>
                 <p className="text-xs text-slate-500 mt-3">
-                  My peers see significantly more energy, initiative, and presence than I report in myself — a pattern that shows up consistently across every dimension of the assessment.
+                  Internal discipline registers externally as energy, initiative, and presence. This pattern holds across every dimension of the assessment — the operating style produces the output consistently.
                 </p>
               </div>
             </FadeIn>
@@ -216,17 +216,18 @@ export default function PersonaEvolution() {
         </div>
       </section>
 
-      {/* ── SECTION 2: WHY the gap exists ──────────────── */}
+      {/* ── SECTION 2: Why both profiles are coherent ──── */}
       <section className="bg-slate-50 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <FadeIn className="max-w-2xl mb-10">
             <div className="section-divider mb-5" />
             <h2 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight mb-4">
-              Why peers see more than I report: three reasons this result is consistent, not surprising
+              Why both assessments point to the same person: three mechanisms that explain the full profile
             </h2>
             <p className="text-slate-600 leading-relaxed text-sm">
-              When peers consistently rate someone higher than they rate themselves, there&apos;s a reason.
-              Understanding it is what makes the result useful rather than just interesting.
+              The SPI and PRS are measuring different things — internal operating mode versus
+              external professional signal. The fact that they diverge is expected. Understanding
+              the mechanism behind each dimension is what makes the data actionable.
             </p>
           </FadeIn>
 
@@ -234,18 +235,18 @@ export default function PersonaEvolution() {
             {[
               {
                 num: "01",
-                title: "Internal Experience ≠ External Signal",
-                body: "Drivers self-regulate internally. They feel the structure and precision from the inside. But to others, what reads on the outside is energy, initiative, and presence. My internal discipline produces externally visible momentum. That momentum is experienced as expressive, not mechanical.",
+                title: "Internal Discipline Registers as External Energy",
+                body: "Drivers self-regulate internally — structure, precision, and decisive momentum are the felt experience. What registers externally is the output of that discipline: initiative, forward motion, and presence. The internal operating mode produces the external signal; the two are not separate.",
               },
               {
                 num: "02",
-                title: "High Social Motivation Leaks Through",
-                body: "My highest motivator score is Networking (94/100). When someone is genuinely energized by human connection, that energy is perceptible: in how they make eye contact, how they listen, how they light up in group settings. I don't perform warmth; my motivational profile produces it naturally.",
+                title: "High Social Motivation Translates Directly",
+                body: "My highest motivator score is Networking (94/100). Genuine investment in human connection is perceptible — in how I make eye contact, how I listen, how I engage in group settings. This is not a performed trait. It is the natural output of a motivational profile oriented toward people.",
               },
               {
                 num: "03",
                 title: "Confidence Manifests as Engagement",
-                body: "Where many people interpret confidence as composure or restraint, mine shows up as initiative and presence. When I'm certain about something, I lean in. I ask more questions. I push the room forward. That pattern reads as enthusiasm, which is characteristic of Expressives, not Drivers.",
+                body: "Where many people interpret confidence as composure or restraint, mine shows up as initiative and presence. Certainty produces lean-in behavior: more questions, forward momentum, pushing the room. That pattern reads as expressive energy — which is an accurate read of how the underlying confidence operates.",
               },
             ].map((card) => (
               <div key={card.num} className="bg-white rounded-2xl border border-slate-100 p-6 hover:shadow-md transition-shadow duration-300">
@@ -261,11 +262,11 @@ export default function PersonaEvolution() {
               The Core Insight
             </p>
             <p className="text-white leading-relaxed">
-              The Driver-Expressive gap isn&apos;t a misalignment between my personality and my behavior.
-              It&apos;s a misalignment between my <em>internal narrative</em> and my{" "}
-              <em>external signal</em>. I was operating as an Expressive without recognizing it. That
-              recognition matters, because intentional Expressives are dramatically more effective
-              than accidental ones.
+              The Driver profile and the Expressive profile are not competing interpretations.
+              They describe the same person at two different layers: <em>internal operating mode</em> and{" "}
+              <em>external professional signal</em>. Both are real. Professionals who can operate with
+              Driver discipline while projecting Expressive presence occupy a distinct and rare position
+              in any room.
             </p>
           </div>
         </div>
@@ -277,12 +278,13 @@ export default function PersonaEvolution() {
           <FadeIn className="max-w-2xl mb-10">
             <div className="section-divider mb-5" />
             <h2 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight mb-4">
-              The divergence concentrates in social dimensions, precisely where Drivers and Expressives differ most
+              Execution strength confirmed across both profiles. Social range extends the picture further.
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Six behavioral dimensions mapped across self-perception (Driver) and peer perception
-              (Expressive). Both profiles agree on task orientation and decisiveness. The gap is
-              additive, concentrated in the relational and social dimensions I had undercounted.
+              Six behavioral dimensions mapped across internal style (Driver) and external perception
+              (Expressive). The profiles converge on task orientation and decisiveness, then diverge
+              on relational and social dimensions — where the Expressive read adds additional range
+              on top of a confirmed execution foundation.
             </p>
           </FadeIn>
           <div
@@ -294,19 +296,19 @@ export default function PersonaEvolution() {
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="bg-slate-50 rounded-xl border border-slate-100 p-5">
-              <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">Convergent Dimensions</p>
+              <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">Confirmed Dimensions</p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Both profiles agree on decisiveness and task orientation. My Driver core is real.
-                The gap is additive, not contradictory: I&apos;m as decisive as I think I am, <em>and</em>{" "}
-                more socially engaging than I recognized.
+                Both profiles confirm decisiveness and task orientation at high levels. The Driver
+                core is validated by both assessments simultaneously — the execution foundation
+                is consistent across self-report and external perception.
               </p>
             </div>
             <div className="bg-slate-50 rounded-xl border border-slate-100 p-5">
-              <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">Divergent Dimensions</p>
+              <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">Extended Dimensions</p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Social energy, expressiveness, and relationship focus all scored dramatically higher
-                in the PRS. These aren&apos;t traits I&apos;d have named as strengths. They turned out to be
-                among my most visible characteristics.
+                Social energy, expressiveness, and relationship focus score significantly higher
+                in the PRS — these are the relational dimensions where execution-oriented
+                professionals typically underperform. They register as clear strengths here.
               </p>
             </div>
           </div>
@@ -319,12 +321,13 @@ export default function PersonaEvolution() {
           <FadeIn className="max-w-2xl mb-10">
             <div className="section-divider mb-5" />
             <h2 className="text-2xl sm:text-3xl font-black text-navy-900 tracking-tight mb-4">
-              Peers attributed qualities I had not claimed, and the data suggests they were right
+              The peer assessment maps a broader professional profile than execution metrics alone capture
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed">
-              I selected 7 adjectives in the SPI. My peers attributed 29 descriptors through the
-              PRS. The overlap validates my self-awareness. The divergence (the 22 traits I didn&apos;t
-              claim) reveals a dimension of my professional presence I had systematically undervalued.
+              The SPI produced 7 self-selected descriptors. The PRS produced 29 peer-attributed
+              descriptors. Where the two overlap, they confirm self-awareness. Where they extend
+              beyond it, they reveal the full range of how the professional profile registers
+              in practice.
             </p>
           </FadeIn>
           <div
@@ -335,13 +338,13 @@ export default function PersonaEvolution() {
             <AdjektivesChart />
           </div>
           <div className="bg-blue-50 border border-blue-100 rounded-xl p-5">
-            <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">What the Divergence Reveals</p>
+            <p className="text-xs font-bold text-navy-900 uppercase tracking-widest mb-2">What the Extended Profile Reveals</p>
             <p className="text-sm text-slate-600 leading-relaxed">
               Words like <em>Calm, Easygoing, Empathetic, Poised, Trusting</em>, and{" "}
-              <em>Well-Rounded</em> don&apos;t appear in my self-view at all. These aren&apos;t adjectives a
-              Driver typically claims. They belong to a more relational, emotionally aware profile.
-              My peers saw through the execution orientation to something warmer and more grounded
-              underneath. That&apos;s not incidental: it&apos;s an asset I had systematically undervalued.
+              <em>Well-Rounded</em> sit outside the Driver profile and outside most execution-oriented
+              self-descriptions. They belong to a more relational, emotionally grounded register.
+              The fact that peers consistently apply them indicates that the execution orientation
+              and the interpersonal presence operate simultaneously — not in spite of each other.
             </p>
           </div>
         </div>
@@ -410,12 +413,12 @@ export default function PersonaEvolution() {
           <FadeIn className="max-w-2xl mb-12">
             <div className="section-divider mb-5" />
             <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-4">
-              The gap has real consequences: in teams, in leadership, and under pressure
+              Applying the full profile: in teams, in leadership, and under pressure
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed">
-              A gap between internal style and external perception has concrete consequences for
-              teamwork, leadership, and communication. Understanding them allows me to navigate
-              each more deliberately.
+              A profile with both Driver discipline and Expressive presence creates specific
+              strategic advantages — and specific points where deliberate calibration produces
+              better outcomes. Both are worth understanding clearly.
             </p>
           </FadeIn>
           <div className="grid sm:grid-cols-3 gap-5 mb-10">
@@ -423,21 +426,21 @@ export default function PersonaEvolution() {
               {
                 context: "In Teams",
                 implication:
-                  "I enter collaborative settings with more social authority than I realize. My energy sets a pace that others follow. The risk: moving faster than the room without noticing, particularly with less assertive teammates who may defer to my momentum rather than voice disagreement.",
+                  "I enter collaborative settings with significant social authority. My energy sets a pace that others follow, which is an asset in fast-moving environments. The calibration point: in rooms with quieter or more deliberate communicators, holding space for full input before advancing a direction produces better outcomes.",
                 adjustment:
                   "Build explicit pause points. Ask 'What am I missing?' before closing a discussion.",
               },
               {
                 context: "In Leadership",
                 implication:
-                  "My Expressive presence makes me naturally persuasive and energizing to be around. But Expressives who don't develop their Driver discipline can be perceived as exciting but unpredictable. The combination of both styles is genuinely rare and worth developing deliberately.",
+                  "The combination of Driver discipline and Expressive presence is genuinely rare. Driver rigor provides the structural credibility. Expressive energy makes others want to follow. Professionals who develop only one side tend to be either respected but cold, or magnetic but unpredictable. The integrated profile avoids both failure modes.",
                 adjustment:
                   "Lead with warmth and narrative; anchor with structure and follow-through.",
               },
               {
                 context: "In Communication",
                 implication:
-                  "My warmth (6.36) means people are already listening. The gap is that my confidence cues don&apos;t yet match, which means high-stakes situations (pitches, interviews, presentations) may not fully leverage the trust I&apos;ve already built through presence and relationships.",
+                  "Warmth at +6.36 means trust is established quickly and people are already engaged. In high-stakes settings — pitches, interviews, presentations — the lever is calibrating delivery to match the credibility that already exists: precision, deliberate pacing, and composed authority reinforce the relational foundation.",
                 adjustment:
                   "Slow down in high-stakes moments. Precision and stillness signal confidence more reliably than energy.",
               },
@@ -480,15 +483,15 @@ export default function PersonaEvolution() {
                 title: "Own the Expressive Range",
                 evidence: "PRS proactivity 6.2 · Charisma warmth 6.36 · Networking motivator 94",
                 insight:
-                  "I spent years treating my social energy as a secondary trait, something that accompanied my execution rather than contributed to it. The data says otherwise. My Expressive profile isn&apos;t in conflict with analytical rigor; it amplifies it. I&apos;m actively reclaiming and developing this range as a professional asset.",
-                action: "Stop downplaying warmth and engagement. Lead with it deliberately.",
+                  "The data is unambiguous: the Expressive profile isn&apos;t incidental to analytical performance — it amplifies it. Relational presence accelerates trust, which accelerates influence, which accelerates outcomes. The two profiles are not in competition. The professional advantage is in deploying both simultaneously and intentionally.",
+                action: "Lead with warmth and engagement as a deliberate strategic asset, not a personality footnote.",
               },
               {
                 num: "02",
                 title: "Build Executive Presence",
                 evidence: "Charisma warmth +6.36 · confidence +3.64 · both above baseline on −10 to +10 scale",
                 insight:
-                  "Trust is already there. The gap is authority projection: the vocal and physical cues that signal &ldquo;this person is in command.&rdquo; Research on charismatic leadership (Antonakis et al., 2011) identifies specific signals: metaphorical language, structured argumentation, controlled pacing, deliberate pause. These are trainable.",
+                  "Trust is established — that foundation is confirmed. The next lever is ensuring that authority projection matches the relational credibility already in place. Research on charismatic leadership (Antonakis et al., 2011) identifies specific, trainable signals: metaphorical language, structured argumentation, controlled pacing, deliberate pause. These are concrete and developable.",
                 action: "Slow down. Let silence do work. Seek out high-stakes speaking opportunities.",
               },
               {
@@ -540,30 +543,31 @@ export default function PersonaEvolution() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="section-divider mb-6" />
           <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-8">
-            The gap isn&apos;t a liability. It&apos;s a more complete picture of who I already am.
+            Two assessments. One coherent profile. A range that most professionals develop only half of.
           </h2>
           <div className="space-y-5 text-slate-300 leading-relaxed">
             <p>
-              Before BCOM 314, I understood my professional identity through a narrow lens:
-              what I could execute, how precisely I could analyze, how consistently I could deliver.
-              That framing served me, but it was incomplete.
+              The SPI and PRS together map a professional with strong execution discipline and
+              equally strong interpersonal presence. The Driver profile — task-oriented, decisive,
+              results-focused — describes a consistent internal operating mode. The Expressive
+              profile — engaging, energizing, relationship-credible — describes how that operating
+              mode registers in rooms, teams, and professional relationships.
             </p>
             <p>
-              The data added a dimension I had systematically underweighted: my relational presence.
-              Not warmth as a soft trait, but warmth as a strategic asset. The PRS didn&apos;t reveal a
-              different person. It revealed a fuller picture of the person I already am. My peers
-              weren&apos;t being generous; they were being accurate.
+              These are not two versions of the same person. They are two dimensions of a single,
+              integrated profile. Warmth is not a soft complement to analytical rigor — it is a
+              force multiplier for it. Trust earned through relational presence is the mechanism
+              by which execution-oriented professionals actually get things done through others.
             </p>
             <p>
-              The professional I&apos;m building going forward integrates both profiles. The Driver&apos;s
-              precision and execution discipline. The Expressive&apos;s social range and relational
-              credibility. The Charismatic Zone as a platform, already established with real room
-              to grow. The motivator profile as a map, showing exactly where I perform best and
-              where I need to manage my own instincts.
+              The Charismatic Zone (warmth +6.36, confidence +3.64) is the platform. The behavioral
+              commitments are the deliberate application of what the data confirms. The motivator
+              profile — Networking 94, Achievement 80, Competition 80 — explains why both dimensions
+              are genuine rather than performed: the raw material was always there.
             </p>
             <p className="text-white font-medium">
-              The gap between who I thought I was and who others see isn&apos;t a problem to solve.
-              It&apos;s a competitive advantage, once you know it&apos;s there.
+              The profile is not a work in progress. It is an already-functional combination of
+              execution strength and interpersonal range — with a clear, specific lever for continued growth.
             </p>
           </div>
 
